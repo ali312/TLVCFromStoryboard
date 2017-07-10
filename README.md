@@ -1,6 +1,6 @@
 # TLVCFromStoryboard
 
-A UIViewController extension that look for a view controller in all available storyboards by class name as an ID.
+A UIViewController extension that looks for a view controller in all available storyboards using class name as StoryboardID.
 
 [![CocoaPods](https://img.shields.io/cocoapods/l/TLVCFromStoryboard.svg)](https://github.com/Flipboard/TLVCFromStoryboard/blob/master/LICENSE)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/TLVCFromStoryboard.svg)](https://img.shields.io/cocoapods/v/TLVCFromStoryboard.svg)
