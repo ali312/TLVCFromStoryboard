@@ -281,6 +281,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = ZN82UPUDUJ;
 				INFOPLIST_FILE = ViewControllerExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crystalnix.ViewControllerExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,6 +298,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = ZN82UPUDUJ;
 				INFOPLIST_FILE = ViewControllerExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crystalnix.ViewControllerExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
