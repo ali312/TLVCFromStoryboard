@@ -10,12 +10,6 @@ A UIViewController extension that looks for a view controller in all available s
 
 ## Installation
 
-### CocoaPods
-
-```ruby
-pod 'TLVCFromStoryboard', '~> 0.1.0'
-```
-    
 ## Usage
 As simple as
 
