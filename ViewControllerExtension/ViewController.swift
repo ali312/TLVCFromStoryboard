@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        ViewController.initFromStoryboard();
-        MissingViewController.initFromStoryboard()
+        let vc  = ViewController.initFromStoryboard()
+        let missingvc = MissingViewController.initFromStoryboard()
+        
+        print("vc \(vc) missing vc \(missingvc)")
     }
 
     override func didReceiveMemoryWarning() {

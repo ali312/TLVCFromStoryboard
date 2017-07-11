@@ -12,39 +12,26 @@ import Foundation
 extension UIViewController {
     
     class func initFromStoryboard() -> UIViewController? {
-        var documentsDirectory: NSURL?
+        let fileURLs :[URL] = Bundle.main.urls(forResourcesWithExtension: "storyboardc", subdirectory: nil)!
         
-        print(String(describing: self))
-        
-        documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last! as NSURL?
-        
-        do {
-            let directoryContents = try FileManager.default.contentsOfDirectory(at: documentsDirectory as! URL, includingPropertiesForKeys: nil, options: [])
-            print(directoryContents)
+        for storyboardURL in fileURLs {
+            let actualStoryboard = UIStoryboard(name: (storyboardURL.lastPathComponent as NSString).deletingPathExtension, bundle: nil)
+            var controller: UIViewController?
             
-            let storyboards = directoryContents.filter{ $0.pathExtension == "storyboard" }
-            
-            for storyboard in storyboards {
-                let actualStoryboard = UIStoryboard(name: (storyboard.lastPathComponent as NSString).deletingPathExtension, bundle: nil)
-                var controller: UIViewController?
-                
-                do {
-                    try TLExceptionHandler.catchException {
-                       controller = actualStoryboard.instantiateViewController(withIdentifier: String(describing: self))
-                    }
+            do {
+                try TLExceptionHandler.catchException {
+                    controller = actualStoryboard.instantiateViewController(withIdentifier: String(describing: self))
                 }
-                catch {
-                    print("An error ocurred: \(error)")
-                    continue
-                }
-                
-                print("Found controller: \(controller)")
-                
-                return controller
-
             }
-        } catch let error as NSError {
-            print("Couldn't find viewController: \(error)")
+            catch {
+                print("An error ocurred: \(error)")
+                continue
+            }
+            
+            print("Found controller: \(controller)")
+            
+            return controller
+            
         }
         
         return nil
