@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TLVCFromStoryboard'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'UIViewController extension that looks for a view controller in all available storyboards by class name.'
 
   s.description      = <<-DESC
